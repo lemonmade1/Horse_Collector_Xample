@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -11,4 +15,14 @@ main {
 footer.page-footer {
   padding-top: 0;
   text-align: right;
+}
+
+body > main > h1, span.card-title {
+  color: rgb(242, 94, 104) !important;
+  text-shadow: 1px 1px 1px black !important;
+}
+
+img {
+  width: 100%;
+  border: 1px solid rgb(242, 94, 104);
 }
