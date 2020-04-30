@@ -31,3 +31,5 @@ class HorseDelete(DeleteView):
   model = Horse
   success_url = '/horses/'
 
+# class HorsePix(DetailView):
+#   model = Horse
