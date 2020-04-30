@@ -3,7 +3,7 @@
 
 # Create an in-memory model (an instance of a Model) 
 
-#### >>> c = Cat(name="Biscuit", breed='Sphinx',
+#### >>> c = Horse(name="Biscuit", breed='Sphinx',
 #### >>> description='Evil looking cuddle monster. Hairless', age=2)
 #### >>> c.__dict__
 ###### {..., 'id': None, 'name': 'Biscuit', 'breed': 'Sphinx',
@@ -16,41 +16,41 @@
 
 # Update single attribute value by assigning new value and calling save()
 
-#### >>> from main_app.models import Cat
-#### >>> c = Cat.objects.first()
+#### >>> from main_app.models import Horse
+#### >>> c = Horse.objects.first()
 #### >>> c   
-##### <Cat: Biscuit>
+##### <Horse: Biscuit>
 
 #### >>> c.name = 'Rubber Biscuit'
 #### >>> c.save()
 #### >>> c   
-###### <Cat: Rubber Biscuit>
+###### <Horse: Rubber Biscuit>
 
-# Calls Cat.objects.all() and see a Cat object exists
+# Calls Horse.objects.all() and see a Horse object exists
 
-### >>> Cat.objects.all()
-##### <QuerySet [<Cat: Cat object (1)>]>
+### >>> Horse.objects.all()
+##### <QuerySet [<Horse: Horse object (1)>]>
 
 # FILTER (objects.filter()) query a Model's data that matches similar criteria 
 
-### >>> Cat.objects.filter(name='Rubber Biscuit')
-#### <QuerySet [<Cat: Rubber Biscuit>]>
+### >>> Horse.objects.filter(name='Rubber Biscuit')
+#### <QuerySet [<Horse: Rubber Biscuit>]>
 
 # FILTER (objects.filter()) for all data with 'Bis' match
 
-### >>> Cat.objects.filter(name__contains='Bis')
-#### <QuerySet [<Cat: Rubber Biscuit>]>
+### >>> Horse.objects.filter(name__contains='Bis')
+#### <QuerySet [<Horse: Rubber Biscuit>]>
 
-### >>> Cat.objects.filter(age__lte=3)
-#### <QuerySet [<Cat: Biscuit>]>
+### >>> Horse.objects.filter(age__lte=3)
+#### <QuerySet [<Horse: Biscuit>]>
 
 # An order_by method:
 
-### >>> Cat.objects.order_by('name')
+### >>> Horse.objects.order_by('name')
 
 ## Or in descending order:
 
-### >>> Cat.objects.order_by('-age')
+### >>> Horse.objects.order_by('-age')
 
 # Change User Password
 

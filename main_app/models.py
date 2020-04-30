@@ -11,4 +11,7 @@ class Horse(models.Model):
   age = models.IntegerField()
 
   def __str__(self):
-      return self.name
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse('horses_detail', kwargs={ 'pk': self.id })
