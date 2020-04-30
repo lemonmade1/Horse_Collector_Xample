@@ -9,4 +9,6 @@ urlpatterns = [
   path('horses/', views.horses_index, name='index'),
   
   path('horses/horses/', views.horse_pix, name='horses'), 
+
+  path('horses/<int:horse_id>/', views.horses_detail, name='horse_detail')
 ]
