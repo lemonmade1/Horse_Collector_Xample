@@ -55,3 +55,9 @@
 # Change User Password
 
 ### python3 manage.py changepassword <user_name>
+
+
+
+
+
+# FIX MIGRATIONS

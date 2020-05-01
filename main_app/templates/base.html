@@ -12,6 +12,21 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <style>
+    body > main > h1, span.card-title {
+      color: rgb(242, 94, 104) !important;
+      text-shadow: 1px 1px 1px black !important;
+    }
+
+    img {
+      width: 100%;
+      border: 1px solid rgb(242, 94, 104);
+    }
+  </style>
+
+  <!-- JAVASCRIPT -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 <body>
 
@@ -23,8 +38,10 @@
         </ul>
         <ul class="right">
           <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'toys_create' %}">Add a Toy</a></li>
+          <li><a href="{% url 'toys_index' %}">View All Toys</a></li>
           <li><a href="{% url 'horses_create' %}">Add A Horse</a></li>
-          <li><a href="{% url 'horses_index' %}">View All My Horses</a></li>
+          <li><a href="{% url 'index' %}">View All My Horses</a></li>
         </ul>
       </div>
     </nav>
@@ -32,7 +49,6 @@
 
   <main class="container">
     {% block content %}
-
     {% endblock %}
   </main>
 
